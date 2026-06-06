@@ -1,6 +1,13 @@
 'use client'
-import { SparklesCore } from '@/components/ui/sparkles'
-import { MouseFollowGlow } from '@/components/ui/mouse-follow-glow'
+import dynamic from 'next/dynamic'
+const SparklesCore = dynamic(
+  () => import('@/components/ui/sparkles').then((m) => m.SparklesCore),
+  { ssr: false }
+)
+const MouseFollowGlow = dynamic(
+  () => import('@/components/ui/mouse-follow-glow').then((m) => m.MouseFollowGlow),
+  { ssr: false }
+)
 
 export default function Hero() {
   return (
