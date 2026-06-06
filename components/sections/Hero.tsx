@@ -1,5 +1,5 @@
 'use client'
-import { SplineScene } from '@/components/ui/splite'
+import { ShaderAnimation } from '@/components/ui/ShaderAnimation'
 import { Spotlight } from '@/components/ui/spotlight'
 
 export default function Hero() {
@@ -53,12 +53,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — Spline */}
-        <div className="relative h-[50vh] lg:h-screen w-full">
-          <SplineScene
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
+        {/* Right — Shader */}
+        <div className="relative h-[50vh] lg:h-screen w-full rounded-2xl overflow-hidden">
+          <ShaderAnimation />
         </div>
       </div>
 
