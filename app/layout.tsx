@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato, Dancing_Script } from "next/font/google";
+import { ParticlesInit } from "@/components/ui/particles-init";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -115,9 +116,11 @@ export default function RootLayout({
         >
           Saltar al contenido principal
         </a>
-        <div id="main-content">
-          {children}
-        </div>
+        <ParticlesInit>
+          <div id="main-content">
+            {children}
+          </div>
+        </ParticlesInit>
       </body>
     </html>
   );
